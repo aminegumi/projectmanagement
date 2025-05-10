@@ -1,4 +1,4 @@
-package com.jiraclone.backend.dto;
+package com.scrum.projectmanagement.dto;
 
 import com.jiraclone.backend.model.Epic;
 import lombok.AllArgsConstructor;
