@@ -1,4 +1,4 @@
-package com.jiraclone.backend.model;
+package com.scrum.projectmanagement.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
