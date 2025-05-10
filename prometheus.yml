@@ -6,7 +6,7 @@ scrape_configs:
   - job_name: 'spring-boot'
     metrics_path: '/api/actuator/prometheus'
     static_configs:
-      - targets: ['app:8082']
+      - targets: ['backend:8082']  # Changé de app à backend
 
   - job_name: 'prometheus'
     static_configs:
