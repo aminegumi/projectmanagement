@@ -1,6 +1,6 @@
-# TaskFlow - Project Management Application
+# TaskFlow - Project Management Application with Reporting
 
-TaskFlow is a comprehensive project management application inspired by Jira, built with React and Spring Boot.
+TaskFlow is a comprehensive project management application inspired by Jira with Reporting, built with React and Spring Boot.
 
 ## Features
 
