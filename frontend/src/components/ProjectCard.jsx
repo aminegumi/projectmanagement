@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { taskAPI } from '../config/api';
+import { taskAPI, projectAPI } from '../config/api';
 
 const Card = styled(Link)`
   display: block;
@@ -82,6 +82,7 @@ const ProjectCard = ({ project }) => {
     total: 0,
     completed: 0
   });
+  const [memberCount, setMemberCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -99,6 +100,9 @@ const ProjectCard = ({ project }) => {
           completed,
           completedPercentage
         });
+        // Fetch member count
+        const memberResponse = await projectAPI.getMembers(project.id);
+        setMemberCount(memberResponse.data.length);
       } catch (error) {
         console.error('Error fetching task stats:', error);
       } finally {
@@ -155,7 +159,7 @@ const ProjectCard = ({ project }) => {
           <StatLabel>Tasks</StatLabel>
         </StatItem>
         <StatItem>
-          <StatValue>{project.membersCount || 0}</StatValue>
+          <StatValue>{loading ? '...' : memberCount}</StatValue>
           <StatLabel>Members</StatLabel>
         </StatItem>
         <StatItem>
