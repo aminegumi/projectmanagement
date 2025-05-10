@@ -25,7 +25,7 @@ jobs:
       - name: Auto merge to main
         run: |
           CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
-          
+
           # Check if there are conflicts
           git fetch origin main
           if git merge-tree $(git merge-base FETCH_HEAD $CURRENT_BRANCH) FETCH_HEAD $CURRENT_BRANCH | grep -e "^<<<<<<<" -e "^>>>>>>>" -e "^=======$"; then
@@ -33,7 +33,6 @@ jobs:
             exit 0
           else
             # Create and auto-merge pull request if no conflicts
-            gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
             gh pr create --base main --head $CURRENT_BRANCH --title "Auto-merge $CURRENT_BRANCH to main" --body "Automated merge from $CURRENT_BRANCH"
             gh pr merge --merge --auto
           fi
