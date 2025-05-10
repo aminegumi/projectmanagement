@@ -1,6 +1,6 @@
 package com.scrum.projectmanagement.dto;
 
-import com.jiraclone.backend.model.Sprint;
+import com.scrum.projectmanagement.model.Sprint;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
