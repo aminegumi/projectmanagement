@@ -1,8 +1,8 @@
-version: '3.8'
-
 services:
-  app:
-    build: .
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
     ports:
       - "8082:8082"
     environment:
@@ -15,10 +15,22 @@ services:
     depends_on:
       - db
     
+  # frontend:
+  #   build:
+  #     context: .
+  #     dockerfile: docker/frontend/Dockerfile
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./frontend:/projectmanagement/frontend
+  #     - /projectmanagement/frontend/node_modules
+  #   depends_on:
+  #     - backend
+    
   db:
     image: mysql:8.0
     ports:
-      - "3306:3306"
+      - "3308:3306"  # Utiliser 3308 au lieu de 3307
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=jiraxxxx
@@ -34,12 +46,12 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus-data:/prometheus
     depends_on:
-      - app
+      - backend
 
   grafana:
     image: grafana/grafana:latest
     ports:
-      - "3000:3000"
+      - "3001:3000"  # Changé pour éviter le conflit avec le frontend
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
@@ -71,8 +83,9 @@ services:
     user: root
     volumes:
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-      - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      # - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./logs:/var/log:ro
     depends_on:
       - elasticsearch
       - kibana

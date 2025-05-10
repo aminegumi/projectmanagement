@@ -1,16 +1,25 @@
-agement\filebeat.yml
 filebeat.inputs:
-- type: container
+# Utiliser une configuration qui fonctionne sur Windows
+- type: log
+  enabled: true
   paths:
-    - '/var/lib/docker/containers/*/*.log'
+    - '/var/log/*.log'  # Chemin générique à l'intérieur du conteneur
+  json.keys_under_root: true
+  json.add_error_key: true
 
+# Commentez la configuration Docker qui pose problème sur Windows
+# processors:
+#   - add_docker_metadata:
+#       host: "unix:///var/run/docker.sock"
+#   - decode_json_fields:
+#       fields: ["message"]
+#       target: "json"
+#       overwrite_keys: true
+
+# Ajoutez un processeur simplifié
 processors:
-  - add_docker_metadata:
-      host: "unix:///var/run/docker.sock"
-  - decode_json_fields:
-      fields: ["message"]
-      target: "json"
-      overwrite_keys: true
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
 
 output.elasticsearch:
   hosts: ["elasticsearch:9200"]
