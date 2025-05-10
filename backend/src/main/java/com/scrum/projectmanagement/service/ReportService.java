@@ -84,7 +84,7 @@ public ReportDTO generateReport(Long projectId, String userEmail, String prompt,
     // Just use the existing project variable:
     List<Task> tasks = taskRepository.findByProjectId(projectId);
         Map<String, Integer> taskStatusCounts = new HashMap<>();
-    taskStatusCounts.put("TO_DO", 0);
+    taskStatusCounts.put("TODO", 0);
     taskStatusCounts.put("IN_PROGRESS", 0);
     taskStatusCounts.put("DONE", 0);
 
@@ -105,7 +105,7 @@ public ReportDTO generateReport(Long projectId, String userEmail, String prompt,
         // Add tasks data
         contextBuilder.append("\nTask Statistics:\n");
         contextBuilder.append("- Total Tasks: ").append(tasks.size()).append("\n");
-        contextBuilder.append("- To Do: ").append(taskStatusCounts.get("TO_DO")).append("\n");
+        contextBuilder.append("- To Do: ").append(taskStatusCounts.get("TODO")).append("\n");
         contextBuilder.append("- In Progress: ").append(taskStatusCounts.get("IN_PROGRESS")).append("\n");
         contextBuilder.append("- Done: ").append(taskStatusCounts.get("DONE")).append("\n");
 
