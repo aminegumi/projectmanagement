@@ -1,47 +1,43 @@
 package com.scrum.projectmanagement.model;
 
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "sprints")
-public class Sprint {
+@Table(name = "reports")
+public class Report {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    private String name;
+    private String title;
 
-    private String goal;
+    @Column(length = 10000)
+    private String content;
 
-    private LocalDate startDate;
-
-    private LocalDate endDate;
+    private String prompt;
 
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private ReportType type;
 
     @ManyToOne
     @JoinColumn(name = "project_id")
     private Project project;
 
-    @OneToMany(mappedBy = "sprint")
-    private Set<Task> tasks = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User author;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -49,7 +45,12 @@ public class Sprint {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public enum Status {
-        PLANNING, ACTIVE, COMPLETED
+    // Define report types
+    public enum ReportType {
+        STATUS_REPORT,
+        SPRINT_ANALYSIS,
+        TEAM_PERFORMANCE,
+        RISK_ASSESSMENT,
+        CUSTOM
     }
 }

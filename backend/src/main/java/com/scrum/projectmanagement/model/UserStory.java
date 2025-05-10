@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,21 +16,19 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "sprints")
-public class Sprint {
+@Table(name = "user_stories")
+public class UserStory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
-    private String name;
+    private String title;
 
-    private String goal;
+    private String description;
 
-    private LocalDate startDate;
-
-    private LocalDate endDate;
+    private Integer storyPoints;
 
     @Enumerated(EnumType.STRING)
     private Status status;
@@ -40,7 +37,11 @@ public class Sprint {
     @JoinColumn(name = "project_id")
     private Project project;
 
-    @OneToMany(mappedBy = "sprint")
+    @ManyToOne
+    @JoinColumn(name = "epic_id")
+    private Epic epic;
+
+    @OneToMany(mappedBy = "userStory")
     private Set<Task> tasks = new HashSet<>();
 
     @CreationTimestamp
@@ -50,6 +51,6 @@ public class Sprint {
     private LocalDateTime updatedAt;
 
     public enum Status {
-        PLANNING, ACTIVE, COMPLETED
+        TODO, IN_PROGRESS, IN_REVIEW, DONE
     }
 }

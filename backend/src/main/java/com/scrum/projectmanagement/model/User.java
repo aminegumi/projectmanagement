@@ -1,6 +1,7 @@
 package com.scrum.projectmanagement.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +9,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,8 +17,8 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "sprints")
-public class Sprint {
+@Table(name = "users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,21 +27,16 @@ public class Sprint {
     @NotBlank
     private String name;
 
-    private String goal;
+    @NotBlank
+    @Email
+    @Column(unique = true)
+    private String email;
 
-    private LocalDate startDate;
-
-    private LocalDate endDate;
+    @NotBlank
+    private String password;
 
     @Enumerated(EnumType.STRING)
-    private Status status;
-
-    @ManyToOne
-    @JoinColumn(name = "project_id")
-    private Project project;
-
-    @OneToMany(mappedBy = "sprint")
-    private Set<Task> tasks = new HashSet<>();
+    private Role role;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -49,7 +44,19 @@ public class Sprint {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public enum Status {
-        PLANNING, ACTIVE, COMPLETED
+    @ManyToMany(mappedBy = "members")
+    private Set<Project> projects = new HashSet<>();
+
+    @OneToMany(mappedBy = "assignee")
+    private Set<Task> assignedTasks = new HashSet<>();
+
+    @OneToMany(mappedBy = "reporter")
+    private Set<Task> reportedTasks = new HashSet<>();
+
+    @OneToMany(mappedBy = "author")
+    private Set<Comment> comments = new HashSet<>();
+
+    public enum Role {
+        MEMBER, PRODUCT_OWNER, SCRUM_MASTER
     }
 }
