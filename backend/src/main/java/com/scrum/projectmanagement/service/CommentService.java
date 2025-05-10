@@ -1,0 +1,78 @@
+package com.scrum.projectmanagement.service;
+
+
+import com.scrum.projectmanagement.model.Comment;
+import com.scrum.projectmanagement.model.Task;
+import com.scrum.projectmanagement.model.User;
+import com.scrum.projectmanagement.repository.CommentRepository;
+import com.scrum.projectmanagement.repository.TaskRepository;
+import com.scrum.projectmanagement.repository.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class CommentService {
+
+    private final CommentRepository commentRepository;
+    private final TaskRepository taskRepository;
+    private final UserRepository userRepository;
+
+    @Transactional
+    public Comment createComment(Comment comment, Long taskId, String authorEmail) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new EntityNotFoundException("Task not found with ID: " + taskId));
+        
+        User author = userRepository.findByEmail(authorEmail)
+                .orElseThrow(() -> new EntityNotFoundException("User not found with email: " + authorEmail));
+
+        comment.setTask(task);
+        comment.setAuthor(author);
+        
+        return commentRepository.save(comment);
+    }
+
+    public List<Comment> getCommentsByTask(Long taskId) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new EntityNotFoundException("Task not found with ID: " + taskId));
+        
+        return commentRepository.findByTaskOrderByCreatedAtDesc(task);
+    }
+
+    @Transactional
+    public Comment updateComment(Long id, Comment commentDetails, String userEmail) {
+        Comment comment = commentRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Comment not found with ID: " + id));
+        
+        User user = userRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new EntityNotFoundException("User not found with email: " + userEmail));
+
+        // Only the author can edit the comment
+        if (!comment.getAuthor().equals(user)) {
+            throw new IllegalArgumentException("You are not authorized to edit this comment");
+        }
+
+        comment.setText(commentDetails.getText());
+        return commentRepository.save(comment);
+    }
+
+    @Transactional
+    public void deleteComment(Long id, String userEmail) {
+        Comment comment = commentRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Comment not found with ID: " + id));
+        
+        User user = userRepository.findByEmail(userEmail)
+                .orElseThrow(() -> new EntityNotFoundException("User not found with email: " + userEmail));
+
+        // Only the author can delete the comment
+        if (!comment.getAuthor().equals(user)) {
+            throw new IllegalArgumentException("You are not authorized to delete this comment");
+        }
+
+        commentRepository.delete(comment);
+    }
+}
