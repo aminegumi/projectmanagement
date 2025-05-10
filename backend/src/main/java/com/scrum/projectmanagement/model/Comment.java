@@ -8,48 +8,34 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "sprints")
-public class Sprint {
+@Table(name = "comments")
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
-    private String name;
-
-    private String goal;
-
-    private LocalDate startDate;
-
-    private LocalDate endDate;
-
-    @Enumerated(EnumType.STRING)
-    private Status status;
+    @Column(columnDefinition = "TEXT")
+    private String text;
 
     @ManyToOne
-    @JoinColumn(name = "project_id")
-    private Project project;
+    @JoinColumn(name = "task_id")
+    private Task task;
 
-    @OneToMany(mappedBy = "sprint")
-    private Set<Task> tasks = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private User author;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-
-    public enum Status {
-        PLANNING, ACTIVE, COMPLETED
-    }
 }
