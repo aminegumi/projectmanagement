@@ -1,6 +1,6 @@
 package com.scrum.projectmanagement.dto;
 
-import com.jiraclone.backend.model.Epic;
+import com.scrum.projectmanagement.model.Epic;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
