@@ -16,44 +16,38 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.MERGE_TOKEN }}
           
-      - name: Setup Git and GitHub CLI
+      - name: Setup Git
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
           
-      - name: Auto merge to main
+      - name: Direct merge to main when no conflicts
         run: |
           CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
+          echo "Current branch: $CURRENT_BRANCH"
+          
+          # Fetch the latest main branch
+          git fetch origin main
           
           # Check if there are conflicts
-          git fetch origin main
           if git merge-tree $(git merge-base FETCH_HEAD $CURRENT_BRANCH) FETCH_HEAD $CURRENT_BRANCH | grep -e "^<<<<<<<" -e "^>>>>>>>" -e "^=======$"; then
             echo "Conflicts detected, manual merge required"
             exit 0
           else
-            # Check if PR already exists
-            EXISTING_PR=$(gh pr list --head $CURRENT_BRANCH --base main --json number --jq '.[0].number')
+            echo "No conflicts detected, proceeding with direct merge"
             
-            if [ -z "$EXISTING_PR" ]; then
-              # Create new PR if none exists
-              echo "Creating new PR for $CURRENT_BRANCH into main"
-              gh pr create --base main --head $CURRENT_BRANCH --title "Auto-merge $CURRENT_BRANCH to main" --body "Automated merge from $CURRENT_BRANCH"
-              PR_NUMBER=$(gh pr list --head $CURRENT_BRANCH --base main --json number --jq '.[0].number')
-            else
-              echo "PR #$EXISTING_PR already exists for $CURRENT_BRANCH into main"
-              PR_NUMBER=$EXISTING_PR
-            fi
+            # Checkout main branch
+            git checkout main
             
-            # Check PR status and merge if possible
-            PR_STATUS=$(gh pr view $PR_NUMBER --json mergeable --jq '.mergeable')
-            if [ "$PR_STATUS" == "true" ]; then
-              echo "Merging PR #$PR_NUMBER"
-              gh pr merge $PR_NUMBER --merge --auto
-            else
-              echo "PR #$PR_NUMBER is not in a mergeable state"
-            fi
+            # Merge the feature branch
+            git merge --no-ff $CURRENT_BRANCH -m "Auto-merge $CURRENT_BRANCH into main"
+            
+            # Push the changes to main
+            git push origin main
+            
+            echo "Successfully merged $CURRENT_BRANCH into main"
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MERGE_TOKEN }}
