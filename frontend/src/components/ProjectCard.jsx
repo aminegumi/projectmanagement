@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { taskAPI, projectAPI } from '../config/api';
+import { taskAPI , projectAPI} from '../config/api';
 
 const Card = styled(Link)`
   display: block;

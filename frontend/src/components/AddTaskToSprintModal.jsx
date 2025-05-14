@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { sprintAPI, taskAPI } from '../config/api';
-import { id } from 'date-fns/locale';
 
 const ModalOverlay = styled.div`
   position: fixed;
