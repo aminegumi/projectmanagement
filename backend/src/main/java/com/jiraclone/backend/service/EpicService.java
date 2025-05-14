@@ -1,10 +1,10 @@
-package com.scrum.projectmanagement.service;
+package com.jiraclone.backend.service;
 
-import com.scrum.projectmanagement.dto.EpicDTO;
-import com.scrum.projectmanagement.model.Epic;
-import com.scrum.projectmanagement.model.Project;
-import com.scrum.projectmanagement.repository.EpicRepository;
-import com.scrum.projectmanagement.repository.ProjectRepository;
+import com.jiraclone.backend.dto.EpicDTO;
+import com.jiraclone.backend.model.Epic;
+import com.jiraclone.backend.model.Project;
+import com.jiraclone.backend.repository.EpicRepository;
+import com.jiraclone.backend.repository.ProjectRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

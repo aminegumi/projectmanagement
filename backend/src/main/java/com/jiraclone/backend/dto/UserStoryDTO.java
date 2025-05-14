@@ -1,6 +1,6 @@
-package com.scrum.projectmanagement.dto;
+package com.jiraclone.backend.dto;
 
-import com.scrum.projectmanagement.model.UserStory;
+import com.jiraclone.backend.model.UserStory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

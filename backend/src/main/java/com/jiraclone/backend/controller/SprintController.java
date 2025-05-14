@@ -1,8 +1,8 @@
-package com.scrum.projectmanagement.controller;
+package com.jiraclone.backend.controller;
 
-import com.scrum.projectmanagement.dto.SprintDTO;
-import com.scrum.projectmanagement.model.Sprint;
-import com.scrum.projectmanagement.service.SprintService;
+import com.jiraclone.backend.dto.SprintDTO;
+import com.jiraclone.backend.model.Sprint;
+import com.jiraclone.backend.service.SprintService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
-package com.scrum.projectmanagement.service;
+package com.jiraclone.backend.service;
 
-import com.scrum.projectmanagement.dto.UserDTO;
-import com.scrum.projectmanagement.model.User;
-import com.scrum.projectmanagement.repository.UserRepository;
+import com.jiraclone.backend.dto.UserDTO;
+import com.jiraclone.backend.model.User;
+import com.jiraclone.backend.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

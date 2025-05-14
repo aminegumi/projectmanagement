@@ -1,4 +1,4 @@
-package com.scrum.projectmanagement.dto;
+package com.jiraclone.backend.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
