@@ -1,4 +1,4 @@
-package com.scrum.projectmanagement.security;
+package com.jiraclone.backend.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

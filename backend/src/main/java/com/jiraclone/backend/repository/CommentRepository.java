@@ -1,7 +1,7 @@
-package com.scrum.projectmanagement.repository;
+package com.jiraclone.backend.repository;
 
-import com.scrum.projectmanagement.model.Comment;
-import com.scrum.projectmanagement.model.Task;
+import com.jiraclone.backend.model.Comment;
+import com.jiraclone.backend.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

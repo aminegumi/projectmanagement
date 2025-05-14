@@ -1,9 +1,9 @@
-package com.scrum.projectmanagement.controller;
+package com.jiraclone.backend.controller;
 
 
-import com.scrum.projectmanagement.dto.TaskDTO;
-import com.scrum.projectmanagement.model.Task;
-import com.scrum.projectmanagement.service.TaskService;
+import com.jiraclone.backend.dto.TaskDTO;
+import com.jiraclone.backend.model.Task;
+import com.jiraclone.backend.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

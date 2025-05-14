@@ -1,14 +1,14 @@
-package com.scrum.projectmanagement.service;
+package com.jiraclone.backend.service;
 
-import com.scrum.projectmanagement.dto.ReportDTO;
-import com.scrum.projectmanagement.model.Project;
-import com.scrum.projectmanagement.model.Report;
-import com.scrum.projectmanagement.model.Task;
-import com.scrum.projectmanagement.model.User;
-import com.scrum.projectmanagement.repository.ProjectRepository;
-import com.scrum.projectmanagement.repository.ReportRepository;
-import com.scrum.projectmanagement.repository.TaskRepository;
-import com.scrum.projectmanagement.repository.UserRepository;
+import com.jiraclone.backend.dto.ReportDTO;
+import com.jiraclone.backend.model.Project;
+import com.jiraclone.backend.model.Report;
+import com.jiraclone.backend.model.Task;
+import com.jiraclone.backend.model.User;
+import com.jiraclone.backend.repository.ProjectRepository;
+import com.jiraclone.backend.repository.ReportRepository;
+import com.jiraclone.backend.repository.TaskRepository;
+import com.jiraclone.backend.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

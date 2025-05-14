@@ -1,8 +1,8 @@
-package com.scrum.projectmanagement.controller;
+package com.jiraclone.backend.controller;
 
-import com.scrum.projectmanagement.dto.ReportDTO;
-import com.scrum.projectmanagement.model.Report;
-import com.scrum.projectmanagement.service.ReportService;
+import com.jiraclone.backend.dto.ReportDTO;
+import com.jiraclone.backend.model.Report;
+import com.jiraclone.backend.service.ReportService;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;

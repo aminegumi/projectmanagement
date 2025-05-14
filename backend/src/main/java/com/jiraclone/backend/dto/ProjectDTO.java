@@ -1,16 +1,15 @@
-package com.scrum.projectmanagement.dto;
+package com.jiraclone.backend.dto;
 
-import com.scrum.projectmanagement.model.Project;
-import com.scrum.projectmanagement.model.Task;
+import com.jiraclone.backend.model.Project;
+import com.jiraclone.backend.model.Task;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.scrum.projectmanagement.model.User; // Add this import for the User class
+import com.jiraclone.backend.model.User; // Add this import for the User class
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Data
 @NoArgsConstructor
