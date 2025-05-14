@@ -1,10 +1,10 @@
-package com.scrum.projectmanagement.service;
+package com.jiraclone.backend.service;
 
-import com.scrum.projectmanagement.dto.SprintDTO;
-import com.scrum.projectmanagement.model.Project;
-import com.scrum.projectmanagement.model.Sprint;
-import com.scrum.projectmanagement.repository.ProjectRepository;
-import com.scrum.projectmanagement.repository.SprintRepository;
+import com.jiraclone.backend.dto.SprintDTO;
+import com.jiraclone.backend.model.Project;
+import com.jiraclone.backend.model.Sprint;
+import com.jiraclone.backend.repository.ProjectRepository;
+import com.jiraclone.backend.repository.SprintRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

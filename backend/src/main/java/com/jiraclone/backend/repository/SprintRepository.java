@@ -1,7 +1,7 @@
-package com.scrum.projectmanagement.repository;
+package com.jiraclone.backend.repository;
 
-import com.scrum.projectmanagement.model.Project;
-import com.scrum.projectmanagement.model.Sprint;
+import com.jiraclone.backend.model.Project;
+import com.jiraclone.backend.model.Sprint;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
