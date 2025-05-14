@@ -1,9 +1,9 @@
-package com.scrum.projectmanagement.controller;
+package com.jiraclone.backend.controller;
 
-import com.scrum.projectmanagement.dto.CommentDTO;
-import com.scrum.projectmanagement.mapper.CommentMapper;
-import com.scrum.projectmanagement.model.Comment;
-import com.scrum.projectmanagement.service.CommentService;
+import com.jiraclone.backend.dto.CommentDTO;
+import com.jiraclone.backend.mapper.CommentMapper;
+import com.jiraclone.backend.model.Comment;
+import com.jiraclone.backend.service.CommentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

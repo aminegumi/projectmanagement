@@ -1,8 +1,8 @@
-package com.scrum.projectmanagement.controller;
+package com.jiraclone.backend.controller;
 
-import com.scrum.projectmanagement.dto.EpicDTO;
-import com.scrum.projectmanagement.model.Epic;
-import com.scrum.projectmanagement.service.EpicService;
+import com.jiraclone.backend.dto.EpicDTO;
+import com.jiraclone.backend.model.Epic;
+import com.jiraclone.backend.service.EpicService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

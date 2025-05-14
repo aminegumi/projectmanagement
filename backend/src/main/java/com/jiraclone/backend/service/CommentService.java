@@ -1,12 +1,12 @@
-package com.scrum.projectmanagement.service;
+package com.jiraclone.backend.service;
 
 
-import com.scrum.projectmanagement.model.Comment;
-import com.scrum.projectmanagement.model.Task;
-import com.scrum.projectmanagement.model.User;
-import com.scrum.projectmanagement.repository.CommentRepository;
-import com.scrum.projectmanagement.repository.TaskRepository;
-import com.scrum.projectmanagement.repository.UserRepository;
+import com.jiraclone.backend.model.Comment;
+import com.jiraclone.backend.model.Task;
+import com.jiraclone.backend.model.User;
+import com.jiraclone.backend.repository.CommentRepository;
+import com.jiraclone.backend.repository.TaskRepository;
+import com.jiraclone.backend.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

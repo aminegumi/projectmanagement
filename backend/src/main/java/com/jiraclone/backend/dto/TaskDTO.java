@@ -1,7 +1,7 @@
-package com.scrum.projectmanagement.dto;
+package com.jiraclone.backend.dto;
 
 
-import com.scrum.projectmanagement.model.Task;
+import com.jiraclone.backend.model.Task;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

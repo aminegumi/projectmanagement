@@ -1,4 +1,4 @@
-package com.scrum.projectmanagement.security;
+package com.jiraclone.backend.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

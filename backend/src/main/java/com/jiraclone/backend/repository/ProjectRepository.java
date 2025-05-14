@@ -1,7 +1,7 @@
-package com.scrum.projectmanagement.repository;
+package com.jiraclone.backend.repository;
 
-import com.scrum.projectmanagement.model.Project;
-import com.scrum.projectmanagement.model.User;
+import com.jiraclone.backend.model.Project;
+import com.jiraclone.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

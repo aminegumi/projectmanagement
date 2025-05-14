@@ -1,8 +1,8 @@
-package com.scrum.projectmanagement.mapper;
+package com.jiraclone.backend.mapper;
 
 
-import com.scrum.projectmanagement.dto.CommentDTO;
-import com.scrum.projectmanagement.model.Comment;
+import com.jiraclone.backend.dto.CommentDTO;
+import com.jiraclone.backend.model.Comment;
 import org.springframework.stereotype.Component;
 
 @Component
