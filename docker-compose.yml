@@ -15,17 +15,17 @@ services:
     depends_on:
       - db
     
-  # frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: docker/frontend/Dockerfile
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - ./frontend:/projectmanagement/frontend
-  #     - /projectmanagement/frontend/node_modules
-  #   depends_on:
-  #     - backend
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8082/api
+    
+    depends_on:
+      - backend
     
   db:
     image: mysql:8.0
