@@ -18,6 +18,7 @@ import NotFound from './pages/NotFound';
 import SprintManagement from './pages/SprintManagement';
 import ReportingAI from './pages/ReportingAI';
 import ReportDetail from './pages/ReportDetail';
+import TaskCard from './components/TaskCard';
 
 // Components
 import ProtectedRoute from './components/ProtectedRoute';
@@ -53,6 +54,8 @@ function App() {
         <Route path="/projects/:projectId" element={<ProjectBoard />} />
         <Route path="/projects/:projectId/settings" element={<ProjectSettings />} />
         <Route path="/projects/:projectId/sprints" element={<SprintManagement />} />
+        <Route path="/tasks" element={<TaskCard />} />
+
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/reporting" element={<ReportingAI />} />
         <Route path="/reporting/:projectId" element={<ReportingAI />} />

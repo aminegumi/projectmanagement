@@ -5,88 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeb2a849-e5f4-4145-b01a-bf755c03d5e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/CICDpipeline.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/ProjectmanagementApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/EpicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/EpicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/SprintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/SprintController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/controller/UserStoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/controller/UserStoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/CommentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/EpicDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/EpicDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/ProjectDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/ProjectDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/ReportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/ReportDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/SprintDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/SprintDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/TaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/dto/UserStoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/dto/UserStoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/mapper/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/Epic.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/Epic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/Sprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/Sprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/model/UserStory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/model/UserStory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/EpicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/EpicRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/ReportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/SprintRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/SprintRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/repository/UserStoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/repository/UserStoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/security/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/EpicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/EpicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/SprintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/SprintService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/scrum/projectmanagement/service/UserStoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jiraclone/backend/service/UserStoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/scrum/projectmanagement/ProjectmanagementApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/jiraclone/backend/ProjectmanagementApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CreateTaskModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CreateTaskModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ProjectCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TaskCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TaskDetailModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TaskDetailModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/config/constants.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/constants.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/context/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/context/AuthContext.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/AuthLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/AuthLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/DashboardLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/DashboardLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/CreateProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CreateProject.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/NotFound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProjectBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProjectBoard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProjectSettings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProjectSettings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +28,10 @@
     &quot;accountId&quot;: &quot;66799a0f-33d7-47d0-ae0e-19aaad9f18bb&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -117,30 +41,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.JiraCloneApplication.executor": "Run",
-    "Spring Boot.ProjectmanagementApplication.executor": "Run",
-    "git-widget-placeholder": "imad",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/topim/Desktop/projectmanagement/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.frontend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.JiraCloneApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProjectmanagementApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/abdel/Desktop/projectmanagement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\topim\Desktop\projectmanagement\backend\src\main\java\com\jiraclone\backend" />
@@ -149,7 +78,7 @@
       <recent name="C:\Users\topim\Desktop\projectmanagement\frontend" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.JiraCloneApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml.frontend: Compose Deployment">
     <configuration name="JiraCloneApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="projectmanagement" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jiraclone.backend.JiraCloneApplication" />
@@ -164,16 +93,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="backend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml.backend: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
       <item itemvalue="Spring Boot.JiraCloneApplication" />
       <item itemvalue="Spring Boot.ProjectmanagementApplication (1)" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.backend: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
@@ -187,6 +157,9 @@
       <updated>1747169884355</updated>
       <workItem from="1747169885433" duration="1468000" />
       <workItem from="1747171463666" duration="2547000" />
+      <workItem from="1747254745301" duration="68000" />
+      <workItem from="1747254846547" duration="3294000" />
+      <workItem from="1747327886758" duration="35000" />
     </task>
     <servers />
   </component>
