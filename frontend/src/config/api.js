@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 
-const API_BASE_URL = 'http://localhost:8082/api';
+const API_BASE_URL = 'https://refactored-halibut-gg6prprgv663wjxq-8082.app.github.dev/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
