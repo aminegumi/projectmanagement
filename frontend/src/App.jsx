@@ -19,6 +19,7 @@ import SprintManagement from './pages/SprintManagement';
 import ReportingAI from './pages/ReportingAI';
 import ReportDetail from './pages/ReportDetail';
 import TaskCard from './components/TaskCard';
+import MyTasks from './pages/MyTask';
 
 // Components
 import ProtectedRoute from './components/ProtectedRoute';
@@ -55,7 +56,7 @@ function App() {
         <Route path="/projects/:projectId/settings" element={<ProjectSettings />} />
         <Route path="/projects/:projectId/sprints" element={<SprintManagement />} />
         <Route path="/tasks" element={<TaskCard />} />
-
+        <Route path="/mytasks" element={<MyTasks />} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/reporting" element={<ReportingAI />} />
         <Route path="/reporting/:projectId" element={<ReportingAI />} />
