@@ -234,7 +234,7 @@ const Sidebar = ({ isOpen, onToggle, user }) => {
             <IconSpan>📊</IconSpan>
             Dashboard
           </NavItem>
-          <NavItem to="/tasks">
+          <NavItem to="/mytasks">
             <IconSpan>✓</IconSpan>
             My Tasks
           </NavItem>
