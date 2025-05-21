@@ -15,6 +15,9 @@ public class UserDTO {
     private User.Role role;
 
     public static UserDTO fromEntity(User user) {
+        if (user == null) {
+            return null;
+        }
         UserDTO dto = new UserDTO();
         dto.setId(user.getId());
         dto.setName(user.getName());

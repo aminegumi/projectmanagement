@@ -9,13 +9,21 @@ import org.springframework.stereotype.Component;
 public class CommentMapper {
 
     public CommentDTO toDTO(Comment comment) {
+        if(comment == null) {
+            return null;
+        }
         CommentDTO dto = new CommentDTO();
         dto.setId(comment.getId());
         dto.setText(comment.getText());
-        dto.setTaskId(comment.getTask().getId());
-        dto.setAuthorId(comment.getAuthor().getId());
-        dto.setAuthorName(comment.getAuthor().getName());
-        dto.setAuthorEmail(comment.getAuthor().getEmail());
+        if (comment.getTask() != null) {
+            dto.setTaskId(comment.getTask().getId());
+        }
+        
+        if (comment.getAuthor() != null) {
+            dto.setAuthorId(comment.getAuthor().getId());
+            dto.setAuthorName(comment.getAuthor().getName());
+            dto.setAuthorEmail(comment.getAuthor().getEmail());
+        }
         dto.setCreatedAt(comment.getCreatedAt());
         dto.setUpdatedAt(comment.getUpdatedAt());
         return dto;
@@ -23,8 +31,10 @@ public class CommentMapper {
 
     public Comment toEntity(CommentDTO dto) {
         Comment comment = new Comment();
-        comment.setId(dto.getId());
-        comment.setText(dto.getText());
+        if(dto != null) {
+            comment.setId(dto.getId());
+            comment.setText(dto.getText());
+        }
         return comment;
     }
 }
