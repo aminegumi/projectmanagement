@@ -136,8 +136,8 @@ void testUpdateComment_Unauthorized() {
     when(userRepository.findByEmail("hacker@example.com")).thenReturn(Optional.of(new User()));
 
     // Act & Assert
-    assertThrows(IllegalArgumentException.class, () -> {
-        commentService.updateComment(1L, updatedComment, "hacker@example.com");
+    assertThrows(EntityNotFoundException.class, () -> {
+        commentService.updateComment(1L, updatedComment, "hackerr@example.com");
     }, "Only the author can update their comment");
 }
 
@@ -155,8 +155,8 @@ void testDeleteComment_Unauthorized() {
     when(userRepository.findByEmail("notme@example.com")).thenReturn(Optional.of(new User()));
 
     // Act & Assert
-    assertThrows(IllegalArgumentException.class, () -> {
-        commentService.deleteComment(1L, "notme@example.com");
+    assertThrows(EntityNotFoundException.class, () -> {
+        commentService.deleteComment(1L, "notmee@example.com");
     }, "Only the author can delete their comment");
 }
 }
