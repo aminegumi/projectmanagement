@@ -25,11 +25,17 @@ jobs:
     - name: Run tests with coverage
       run: |
         cd backend
-        mvn clean test jacoco:report
+        mvn clean test
+        
+    - name: Generate coverage report
+      run: |
+        cd backend
+        mvn jacoco:report
+      continue-on-error: true
         
     - name: Generate JUnit Report
       uses: mikepenz/action-junit-report@v3
-      if: always()  # Always run even if tests fail
+      if: always()
       with:
         report_paths: 'backend/target/surefire-reports/TEST-*.xml'
         
@@ -50,6 +56,11 @@ jobs:
     - name: Coverage Report Summary
       run: |
         echo "## Test Coverage Report" >> $GITHUB_STEP_SUMMARY
-        cd backend/target/site/jacoco/
-        TOTAL_COVERAGE=$(grep -o 'Total[^%]*%' index.html | sed 's/<.*>//' | awk '{print $2}')
-        echo "Overall coverage: $TOTAL_COVERAGE" >> $GITHUB_STEP_SUMMARY
+        if [ -f backend/target/site/jacoco/index.html ]; then
+          cd backend/target/site/jacoco/
+          COVERAGE=$(grep -o 'Total[^%]*%' index.html || echo "Coverage data not found")
+          echo "Overall coverage: $COVERAGE" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "JaCoCo report not generated. Check test results for errors." >> $GITHUB_STEP_SUMMARY
+        fi
+      continue-on-error: true
