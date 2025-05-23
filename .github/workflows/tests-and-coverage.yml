@@ -39,20 +39,26 @@ jobs:
       with:
         report_paths: 'backend/target/surefire-reports/TEST-*.xml'
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Upload test results
+      
+    # Using a more basic approach for artifacts
+    - name: Archive test results
       if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: backend/target/surefire-reports/
+      run: |
+        mkdir -p artifacts/test-results
+        cp -r backend/target/surefire-reports/* artifacts/test-results/ || echo "No test results found"
         
-    - name: Upload coverage report
+    - name: Archive coverage report
       if: always()
-      uses: actions/upload-artifact@v2
+      run: |
+        mkdir -p artifacts/coverage
+        cp -r backend/target/site/jacoco/* artifacts/coverage/ || echo "No coverage report found"
+        
+    - name: Upload artifacts
+      if: always()
+      uses: actions/upload-artifact@master
       with:
-        name: coverage-report
-        path: backend/target/site/jacoco/
+        name: test-and-coverage-reports
+        path: artifacts/
         
     - name: Coverage Report Summary
       run: |
